@@ -63,7 +63,20 @@ const Kanban = props => {
       alert(err)
     }
   }
-
+  useEffect(() => {
+    const fetchAssignedTasks = async () => {
+      try {
+        const tasks = await taskApi.getAssignedTasks();
+        console.log("Assigned tasks:", tasks);
+        // You can integrate these tasks into your existing data structure or display them separately.
+      } catch (error) {
+        console.error("Error fetching assigned tasks:", error);
+      }
+    };
+  
+    fetchAssignedTasks();
+  }, []);
+  
   const createSection = async () => {
     try {
       const section = await sectionApi.create(boardId)
