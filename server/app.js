@@ -36,8 +36,8 @@ const app = express();
 // CORS configuration for Vercel deployment
 app.use(cors({
     origin: [
-        'https://kanban-project-phi.vercel.app', 
-        'https://zidio-kanban-project.vercel.app', 
+        'https://mitt-arv-kan-ban-assignment.vercel.app', 
+        'https://mitt-arv-kan-ban-assignment-emzx.vercel.app', 
         'http://localhost:3000'
     ],
     credentials: true,
